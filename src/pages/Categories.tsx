@@ -27,11 +27,11 @@ const Categories = () => {
                 className="group relative flex aspect-[4/3] transform flex-col overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl border border-border hover:border-primary"
               >
                 <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/50 to-transparent transition-colors group-hover:from-background/90" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-8xl text-primary/20">
-                    {category.icon}
-                  </span>
-                </div>
+                <img 
+                  src={category.image} 
+                  alt={category.name}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
                 <div className="relative z-20 mt-auto p-4">
                   <h3 className="text-xl font-bold">{category.name}</h3>
                 </div>

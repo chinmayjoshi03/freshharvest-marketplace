@@ -35,7 +35,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         <p className="text-sm text-muted-foreground line-clamp-2">{product.description}</p>
         <div className="flex items-center justify-between">
           <p className="font-semibold text-primary">
-            ${product.price.toFixed(2)} <span className="text-sm text-muted-foreground">/ {product.unit}</span>
+            ₹{product.price} <span className="text-sm text-muted-foreground">/ {product.unit}</span>
           </p>
           <Button
             size="sm"

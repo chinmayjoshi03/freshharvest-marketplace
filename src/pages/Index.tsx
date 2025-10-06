@@ -63,11 +63,13 @@ const Index = () => {
                   className="group"
                 >
                   <div className="aspect-square w-full flex items-center justify-center bg-card rounded-lg overflow-hidden relative border border-border hover:border-primary transition-all">
+                    <img 
+                      src={category.image} 
+                      alt={category.name}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                    <div className="relative z-10 text-center">
-                      <span className="material-symbols-outlined text-5xl text-primary mb-2 block">
-                        {category.icon}
-                      </span>
+                    <div className="relative z-10 text-center mt-auto mb-4">
                       <h3 className="text-lg font-semibold">{category.name}</h3>
                     </div>
                   </div>
