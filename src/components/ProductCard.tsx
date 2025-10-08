@@ -21,9 +21,16 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     addToCart(product);
   };
 
+  const handleCardClick = () => {
+    navigate(`/products/${product.id}`);
+  };
+
   return (
     <div className="group cursor-pointer">
-      <div className="aspect-square w-full overflow-hidden rounded-lg bg-card">
+      <div 
+        className="aspect-square w-full overflow-hidden rounded-lg bg-card"
+        onClick={handleCardClick}
+      >
         <img
           alt={product.name}
           className="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity"
@@ -31,7 +38,12 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         />
       </div>
       <div className="mt-4 space-y-2">
-        <h3 className="text-base font-medium">{product.name}</h3>
+        <h3 
+          className="text-base font-medium cursor-pointer hover:text-primary transition-colors"
+          onClick={handleCardClick}
+        >
+          {product.name}
+        </h3>
         <p className="text-sm text-muted-foreground line-clamp-2">{product.description}</p>
         <div className="flex items-center justify-between">
           <p className="font-semibold text-primary">
